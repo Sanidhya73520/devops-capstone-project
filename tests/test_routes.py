@@ -230,7 +230,7 @@ class TestAccountService(TestCase):
             response.status_code,
             status.HTTP_405_METHOD_NOT_ALLOWED
         )
-    
+
     def test_security_headers(self):
         """It should return security headers"""
         response = self.client.get(
@@ -272,4 +272,3 @@ class TestAccountService(TestCase):
             response.headers.get("Access-Control-Allow-Origin"),
             "*"
         )
-        
